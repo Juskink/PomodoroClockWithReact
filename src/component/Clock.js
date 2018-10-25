@@ -3,7 +3,7 @@ import Session from "./Session";
 import Break from "./Break";
 import Timer from "./Timer";
 import Controls from "./controls";
-import sound from "./sound/countdown.wav";
+
 
 class Clock extends React.Component {
   constructor(props) {
@@ -67,7 +67,7 @@ class Clock extends React.Component {
 
   onChange = () => {
     if (this.state.timer <= 0) {
-      this.playAudio();
+      // this.playAudio();
       this.state.label === "Session"
         ? this.setState({ label: "Break", timer: this.state.break * 60000 })
         : this.setState({
