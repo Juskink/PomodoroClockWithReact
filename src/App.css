@@ -1,0 +1,72 @@
+body {
+  background-color: rgb(192, 186, 186);
+}
+
+input {
+  color: red;
+  background-color: rgb(34, 33, 33);
+  font-size: 1.5rem;
+  text-align: center;
+  border: 0px solid;
+}
+
+button {
+  font-size: 1.3rem;
+  border: 1px solid black;
+}
+
+#clock {
+  background-color: rgb(34, 33, 33);
+  color: white;
+  width: 50%;
+  margin: 100px auto;
+  border: 1px solid black;
+  box-shadow: 1px 1px 0px #000, 2px 2px 0px #000, 3px 3px 0px #000,
+    4px 4px 0px #000, 5px 5px 0px #000, 6px 6px 0px #000;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 20% 20% 40% 20%;
+  grid-template-areas:
+    "header header"
+    "session break"
+    "timer timer"
+    "controls controls";
+  text-align: center;
+}
+
+#header {
+  grid-area: header;
+}
+
+#adjust {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin: 5px 5px;
+}
+
+#break {
+  grid-area: break;
+  margin: 0px 5px;
+}
+
+#session {
+  grid-area: session;
+  margin: 0px 5px;
+}
+
+#timer {
+  grid-area: timer;
+  margin: 20px auto;
+  border: 2px solid blue;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+
+#controls {
+  grid-area: controls;
+  margin-top: 5px;
+  justify-content: center;
+  align-content: center;
+}
